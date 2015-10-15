@@ -6,6 +6,26 @@
 //  Copyright © 2015 Wess Cope. All rights reserved.
 //
 
+
+/*
+Example Usage:
+
+let request = Request(baseUrl:"..")
+    request.create { http in
+        http.path       = "/users/profile/1"
+        http.headers    = [...:...]
+        http.params     = [...:...]
+        http.post { success, response, error in
+    }
+}
+
+// OR
+
+request.get("/users/profile/1") { success, response, error in
+}
+
+*/
+
 import Foundation
 
 public typealias ResponseBlock = ((data:AnyObject?, response:NSURLResponse, error:NSError?) -> Void)
